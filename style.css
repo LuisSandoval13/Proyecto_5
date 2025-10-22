@@ -1,0 +1,108 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+.testimonios {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.testimonios h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr)); 
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: stretch; 
+}
+
+
+@media (max-width: 768px) {
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.tarjeta {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  min-height: 260px;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.burbuja {
+  background: #f0f4f8;
+  border-radius: 10px;
+  padding: 20px;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.burbuja::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #f0f4f8 transparent transparent transparent;
+}
+
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.perfil img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  object-fit: cover;
+}
+
+
+.info h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.info .rol {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
